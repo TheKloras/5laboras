@@ -2,7 +2,7 @@ package com.company.sarasas;
 
 import java.util.Comparator;
 
-public class SarasasImpl implements Sarasas{
+public class SarasasImpl implements Sarasas,Comparable{
     private String darbininkas;
     private String detale;
     private int pagamintasKiekis;
@@ -64,4 +64,11 @@ public class SarasasImpl implements Sarasas{
                 '}';
     }
 
+    @Override
+    public int compareTo(Object o) {
+        return Comparator
+                .comparing(SarasasImpl::getPagamintasKiekis).reversed()
+                .thenComparing(SarasasImpl::getDetale)
+                .compare(this,(SarasasImpl)o);
+    }
 }
