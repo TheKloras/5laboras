@@ -61,6 +61,7 @@ public class SarasasImpl implements Sarasas,Comparable{
                 ", detale='" + detale + '\'' +
                 ", pagamintasKiekis=" + pagamintasKiekis +
                 ", detalesKaina=" + detalesKaina +
+                ", suma=" + detalesKaina * pagamintasKiekis +
                 '}';
     }
 
